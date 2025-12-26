@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目详情 - 我的作品集</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/details.css">
+</head>
+<body>
+    <div class="detail-container" id="project-detail">
+        <!-- 内容由JS动态加载 -->
+    </div>
+
+    <script src="../js/details.js"></script>
+    <script>
+        // 从URL获取项目ID（如campus-guide.html取campus-guide）
+        const projectId = window.location.pathname
+            .split('/').pop().replace('.html', '');
+        
+        // 加载项目详情
+        loadProjectDetail(projectId);
+    </script>
+</body>
+</html>
